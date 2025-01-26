@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "master" ] # 触发部署的分支名称（根据你的主分支名称修改）
+    branches: [ "zenless" ] # 触发部署的分支名称（根据你的主分支名称修改）
 
 jobs:
   deploy:
