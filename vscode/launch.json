@@ -1,0 +1,22 @@
+
+{
+    "configurations": [
+      {
+        "name": "VitePress Dev",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "pnpm",
+        "args": ["vitepress", "dev"],
+        "cwd": "${workspaceFolder}"
+      },
+      {
+        "name": "VitePress Build",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "pnpm",
+        "args": ["vitepress", "build"],
+        "cwd": "${workspaceFolder}"
+      }
+    ]
+  }
+  // ...existing code...

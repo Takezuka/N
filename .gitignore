@@ -1,0 +1,6 @@
+﻿.idea
+node_modules
+dist
+pnpm-lock.yaml
+.vscode
+.vitepress/cache/deps
