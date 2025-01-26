@@ -1,12 +1,12 @@
 <template>
   <div id="layout">
-    <Header />
-    <Content id="content" class="rounded-8" />
-    <Footer />
+    <Header/>
+    <Content id="content" class="rounded-8"/>
+    <Footer/>
   </div>
   <div id="background">
-    <img id="bg_1" src="/assets-classic/images/bg_1.jpg" />
-    <img id="bg_2" src="/assets-classic/images/bg_2.jpg ">
+    <div id="bg_1"/>
+    <div id="bg_2"/>
   </div>
 </template>
 
@@ -54,9 +54,11 @@ import './styles/styles.scss'
 
 #bg_1 {
   height: 160px;
+  background-color: #1e84cd;
 }
 
 #bg_2 {
   height: 120px;
+  background: linear-gradient(to bottom, #9dc9e0, transparent);
 }
 </style>
