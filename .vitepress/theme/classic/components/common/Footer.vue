@@ -1,5 +1,5 @@
 ﻿<template>
-  <div id="footer-container" class="rounded-12">
+  <div id="footer-container" class="rounded-8">
     <div id="emblems">
       <img v-for="i in 7" :src="data.base + 'assets-classic/images/emblems/' + i + '.png'" />
     </div>

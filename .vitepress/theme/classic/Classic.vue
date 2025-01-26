@@ -1,7 +1,7 @@
 <template>
   <div id="layout">
     <Header />
-    <Content id="content" class="rounded-12" />
+    <Content id="content" class="rounded-8" />
     <Footer />
   </div>
   <div id="background">

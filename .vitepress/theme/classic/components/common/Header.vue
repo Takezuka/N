@@ -1,6 +1,6 @@
 ﻿<template>
   <div id="header-container">
-    <div id="header" class="rounded-12">
+    <div id="header" class="rounded-8">
       <img id="logo" src="/assets-classic/images/logo.png">
       <div id="header-functions">
         <ChipLink text="🇨🇳恩情"/>
@@ -10,7 +10,7 @@
         <ChipLink text="联系我们" last/>
       </div>
     </div>
-    <div id="navbar" class="rounded-12">
+    <div id="navbar" class="rounded-8">
       <NavItem text="恩情"/>
       <NavItem text="南下"/>
       <NavItem text="忠诚"/>
