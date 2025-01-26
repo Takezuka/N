@@ -5,9 +5,9 @@ import Classic from './classic/Classic.vue'
 
 // https://vitepress.dev/reference/runtime-api#usedata
 const { site, frontmatter } = useData()
-const useClassic = inject('useClassicTheme')
+const isClassicTheme = inject('isClassicTheme')
 </script>
 
 <template>
-  <Classic v-if="useClassic"/>
+  <Classic/>
 </template>

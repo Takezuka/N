@@ -7,17 +7,37 @@ import './style.css'
 export default {
   Layout,
   enhanceApp({ app, router, siteData }) {
+    const TAG = 'EnhanceApp'
+
     // 全局主题配置
-    const classicThemeKey = 'useClassicTheme'
+    const classicThemeKey = 'isClassicTheme'
 
-    const storedUseClassicTheme = localStorage.getItem(classicThemeKey) || true
-    const useClassicTheme = ref(storedUseClassicTheme)
+    if (import.meta.env.SSR) {
+      console.log(TAG, 'SSR Polyfill LocalStorage')
 
-    watch(useClassicTheme, newVal => {
-      localStorage.setItem(classicThemeKey, newVal)
+      globalThis.localStorage = {
+        setItem: (k, v) => {
+          console.log(TAG, 'SSR LocalStorage Set', k, v)
+        }, getItem: (k) => {
+          console.log(TAG, 'SSR LocalStorage Get', k)
+          return null
+        }
+      } as any
+    }
+
+    let storedIsClassicTheme = localStorage.getItem(classicThemeKey) || true
+    if (storedIsClassicTheme === 'homo no') storedIsClassicTheme = false
+
+    const isClassicTheme = ref(storedIsClassicTheme)
+
+    console.log(TAG, 'IsClassicTheme', storedIsClassicTheme)
+
+    watch(isClassicTheme, newVal => {
+      console.log(TAG, 'Watch IsClassicTheme', newVal)
+      localStorage.setItem(classicThemeKey, newVal === true ? '111' : 'homo no')
     })
 
-    app.provide(classicThemeKey, useClassicTheme)
+    app.provide(classicThemeKey, isClassicTheme)
   }
 } satisfies Theme
 
