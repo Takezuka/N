@@ -1,0 +1,1 @@
+import{_ as r,c as n,G as o,o as s}from"./chunks/framework.NR_SbArQ.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"rape-2.md","filePath":"rape-2.md"}'),e={name:"rape-2.md"};function p(a,t,i,l,_,g){return s(),n("div",null,t[0]||(t[0]=[o("",10)]))}const m=r(e,[["render",p]]);export{d as __pageData,m as default};
