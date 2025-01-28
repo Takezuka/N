@@ -1,13 +1,13 @@
 ﻿<template>
   <div id="footer-container" class="rounded-8">
     <div id="emblems">
-      <img v-for="i in 7" :src="data.base + 'assets-classic/images/emblems/' + i + '.png'" />
+      <img class="emblem" v-for="i in 6" :src="data.base + 'assets-classic/images/emblems/' + i + '.png'" />
     </div>
     <div id="footer-links">
-      <ChipLink text="🇨🇳恩情" />
-      <ChipLink text="🇺🇸南下" />
-      <ChipLink text="注册" />
-      <ChipLink text="登录" />
+      <ChipLink text="恩情" />
+      <ChipLink text="南下" />
+      <ChipLink text="会员制" />
+      <ChipLink text="脱北" />
       <ChipLink text="联系我们" last />
     </div>
     <div id="copyright-text">
@@ -43,7 +43,21 @@ const data = useData().site
 
 #emblems {
   display: flex;
-  gap: 16px;
+  gap: 12px;
+}
+
+.emblem{
+  width: 150px;
+  height: 75px;
+
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
+.emblem:hover {
+  filter: drop-shadow(0 0px 5px #ffea00);
+
+  transform: scale(1.05);
 }
 
 #copyright-text {

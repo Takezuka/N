@@ -43,7 +43,7 @@ import './styles/styles.scss'
 #layout {
   position: relative;
   width: 1000px;
-  margin: 32px 0;
+  margin: 32px auto;
 
   display: flex;
   flex-direction: column;
